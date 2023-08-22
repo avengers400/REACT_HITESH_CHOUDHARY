@@ -2,11 +2,14 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import './App.css'
-
+import Chai from "./chai";
 function App() {
 
      return (
+        <>
+           <Chai />
            <h1>chai aur react with vite | RC </h1>
+           </>
      );
 //   const [count, setCount] = useState(0)
 
