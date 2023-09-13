@@ -10,10 +10,10 @@ export default function Login() {
     const[password, setPassword] = useState('')
     const handleSubmit = (e) => {
           e.preventDefault()
-          setUser({userName, password})
+          setUser({userName: userName, password: password})
     }
   return (
-
+    <>
     <UserContext.Provider value={user}>
         <h2>Login</h2>
         <input type="text"
@@ -26,6 +26,7 @@ export default function Login() {
         placeholder='password'/>
         <button onClick={handleSubmit}>Submit</button>
     </UserContext.Provider>
+    </>
   )
 }
 
