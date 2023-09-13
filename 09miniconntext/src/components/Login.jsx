@@ -11,6 +11,9 @@ export default function Login() {
     const handleSubmit = (e) => {
           e.preventDefault()
           setUser({userName: userName, password: password})
+          console.log(user)
+          console.log(userName)
+          console.log(password)
     }
   return (
     <>
