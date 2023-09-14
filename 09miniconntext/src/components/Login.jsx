@@ -1,17 +1,13 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from 'react'
+import {useUserData } from '../context/UserContext';
 
 export default function Login() {
-    
-    const[user,setUser] = useState({})
+
+    const {setUser} = useUserData();
     const[userName, setUsername] = useState('')
     const[password, setPassword] = useState('')
     const handleSubmit = (e) => {
-          e.preventDefault()
-          setUser({userName: userName, password: password})
-          console.log(user)
-          console.log(userName)
-          console.log(password)
+      setUser({name: userName, password: password});
     }
   return (
     <>

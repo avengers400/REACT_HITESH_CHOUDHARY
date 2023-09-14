@@ -4,8 +4,8 @@ import { useUserData } from '../context/UserContext';
 
 export default function Profile() {
     // const {user} = useContext(userContext)
-    const { user  } = useUserData()
+    const { user, isUserLogggedIn  } = useUserData()
     return (
-    <div>Welcome {user} </div>
+    <div>Welcome {user.name} {user.password}</div>
     )
 }
