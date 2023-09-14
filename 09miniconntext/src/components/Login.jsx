@@ -1,8 +1,6 @@
-import React, {createContext} from 'react'
+import React from 'react'
 import { useState } from 'react'
 
-
-const UserContext = createContext()
 export default function Login() {
     
     const[user,setUser] = useState({})
@@ -17,7 +15,6 @@ export default function Login() {
     }
   return (
     <>
-    <UserContext.Provider value={user}>
         <h2>Login</h2>
         <input type="text"
         value={userName}
@@ -28,9 +25,6 @@ export default function Login() {
         onChange={(e) => setPassword(e.target.value)}
         placeholder='password'/>
         <button onClick={handleSubmit}>Submit</button>
-    </UserContext.Provider>
     </>
   )
 }
-
-export { UserContext }
