@@ -1,15 +1,18 @@
 import React, {useContext} from 'react'
-import UserContext from './Login'
+import { UserContext } from '../context/Context'
 
 export default function Profile() {
-    const user = useContext(UserContext)
-    const {userName} = user
+    const  { user, isUserLoggedIn } = useContext(UserContext)
+    console.log(user)
     
     
-
    
+       
+    if (user.name==='') return <div>Please provide username</div>
+    if (user.password==='') return <div>Please provide password</div>
 
     return (
-    <div>Welcome {userName} </div>
+    <div>{(!isUserLoggedIn) ? "Please login" : "Welcome " + user.name}</div>
+
     )
 }
